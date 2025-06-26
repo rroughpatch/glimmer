@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 
 export const Route = createRootRoute({
@@ -7,10 +6,11 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <React.Fragment>
-      <div>Hello "__root"!</div>
-      <hr/>
-      <Outlet />
-    </React.Fragment>
+    <div className='flex flex-row items-center justify-center h-screen flex-1'>
+      <div className='w-20 bg-accent h-full'></div>
+      <div className='w-full h-full'>
+        <Outlet />
+      </div>
+    </div>  
   )
 }
